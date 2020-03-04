@@ -1,0 +1,183 @@
+{
+  "Header": {
+    "Title": "WeatherToday",
+    "Description": "Today's Weather Observation",
+    "Uri": "https://data.tmd.go.th/api/WeatherToday/V1",
+    "LastBuiltDate": "4/3/2020 16:52:21",
+    "CopyRight": "Thai Meteorology Department 2015",
+    "Generator": "TMDData_API services"
+  },
+  "Stations": [
+    {
+      "WmoNumber": "48300",
+      "StationNameTh": "แม่ฮ่องสอน",
+      "StationNameEng": "MAE HONG SON",
+      "Province": "แม่ฮ่องสอน",
+      "Latitude": {
+        "Value": "19.298972222222222222222222222",
+        "Unit": "decimal degree"
+      },
+      "Longitude": {
+        "Value": "97.97577777777777777777777778",
+        "Unit": "decimal degree"
+      },
+      "Observe": {
+        "Time": "4/3/2020",
+        "MeanSeaLevelPressure": {
+          "Value": 1012.61,
+          "Unit": "hPa"
+        },
+        "Temperature": {
+          "Value": 18.8,
+          "Unit": "celcius"
+        },
+        "MaxTemperature": {
+          "Value": 35.3,
+          "Unit": "celcius"
+        },
+        "DiffMaxTemperature": {
+          "Value": -0.6,
+          "Unit": "celcius"
+        },
+        "MinTemperature": {
+          "Value": 18.4,
+          "Unit": "celcius"
+        },
+        "DiffMinTemperature": {
+          "Value": 2.3,
+          "Unit": "hPa"
+        },
+        "RelativeHumidity": {
+          "Value": 90.0,
+          "Unit": "%"
+        },
+        "WindDirection": {
+          "Value": "000",
+          "Unit": "degree"
+        },
+        "WindSpeed": {
+          "Value": 0.0,
+          "Unit": "km/h"
+        },
+        "Rainfall": {
+          "Value": 0.1,
+          "Unit": "mm"
+        }
+      }
+    },
+    {
+      "WmoNumber": "48325",
+      "StationNameTh": "แม่สะเรียง",
+      "StationNameEng": "MAE SARIANG",
+      "Province": "แม่ฮ่องสอน",
+      "Latitude": {
+        "Value": "18.166666666666666666666666667",
+        "Unit": "decimal degree"
+      },
+      "Longitude": {
+        "Value": "97.93333333333333333333333333",
+        "Unit": "decimal degree"
+      },
+      "Observe": {
+        "Time": "4/3/2020",
+        "MeanSeaLevelPressure": {
+          "Value": 1012.59,
+          "Unit": "hPa"
+        },
+        "Temperature": {
+          "Value": 19.5,
+          "Unit": "celcius"
+        },
+        "MaxTemperature": {
+          "Value": 35.5,
+          "Unit": "celcius"
+        },
+        "DiffMaxTemperature": {
+          "Value": -1.5,
+          "Unit": "celcius"
+        },
+        "MinTemperature": {
+          "Value": 18.9,
+          "Unit": "celcius"
+        },
+        "DiffMinTemperature": {
+          "Value": 2.7,
+          "Unit": "hPa"
+        },
+        "RelativeHumidity": {
+          "Value": 90.0,
+          "Unit": "%"
+        },
+        "WindDirection": {
+          "Value": "000",
+          "Unit": "degree"
+        },
+        "WindSpeed": {
+          "Value": 0.0,
+          "Unit": "km/h"
+        },
+        "Rainfall": {
+          "Value": 0.0,
+          "Unit": "mm"
+        }
+      }
+    },
+    {
+      "WmoNumber": "48303",
+      "StationNameTh": "เชียงราย",
+      "StationNameEng": "CHIANG RAI",
+      "Province": "เชียงราย",
+      "Latitude": {
+        "Value": "19.961388888888888888888888889",
+        "Unit": "decimal degree"
+      },
+      "Longitude": {
+        "Value": "99.88138888888888888888888889",
+        "Unit": "decimal degree"
+      },
+      "Observe": {
+        "Time": "4/3/2020",
+        "MeanSeaLevelPressure": {
+          "Value": 1012.36,
+          "Unit": "hPa"
+        },
+        "Temperature": {
+          "Value": 18.0,
+          "Unit": "celcius"
+        },
+        "MaxTemperature": {
+          "Value": 34.4,
+          "Unit": "celcius"
+        },
+        "DiffMaxTemperature": {
+          "Value": -0.2,
+          "Unit": "celcius"
+        },
+        "MinTemperature": {
+          "Value": 17.4,
+          "Unit": "celcius"
+        },
+        "DiffMinTemperature": {
+          "Value": 0.9,
+          "Unit": "hPa"
+        },
+        "RelativeHumidity": {
+          "Value": 86.0,
+          "Unit": "%"
+        },
+        "WindDirection": {
+          "Value": "000",
+          "Unit": "degree"
+        },
+        "WindSpeed": {
+          "Value": 0.0,
+          "Unit": "km/h"
+        },
+        "Rainfall": {
+          "Value": 0.0,
+          "Unit": "mm"
+        }
+      }
+    }
+  ]
+}
