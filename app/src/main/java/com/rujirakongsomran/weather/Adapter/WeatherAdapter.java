@@ -33,8 +33,17 @@ public class WeatherAdapter extends RecyclerView.Adapter<WeatherViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull WeatherViewHolder holder, int position) {
-        holder.tvStationName.setText(weatherList.get(position).getStationNameEng());
+        holder.tvDateValue.setText(weatherList.get(position).getTime());
+        holder.tvStationNameTh.setText(weatherList.get(position).getStationNameTh());
+        holder.tvStationNameEng.setText(weatherList.get(position).getStationNameEng());
         holder.tvTemperatureValue.setText(String.valueOf(weatherList.get(position).getTemperatureValue()));
+        holder.tvTemperatureUnit.setText(weatherList.get(position).getTemperatureUnit());
+        holder.tvRelativeHumidityValue.setText(String.valueOf(weatherList.get(position).getRelativeHumidityValue()));
+        holder.tvRelativeHumidityUnit.setText(weatherList.get(position).getRelativeHumidityUnit());
+        holder.tvWindSpeedValue.setText(String.valueOf(weatherList.get(position).getWindSpeedValue()));
+        holder.tvWindSpeedUnit.setText(weatherList.get(position).getWindSpeedValueUnit());
+        holder.tvRainfallValue.setText(String.valueOf(weatherList.get(position).getRainfallValue()));
+        holder.tvRainfallUnit.setText(weatherList.get(position).getRainfallUnit());
     }
 
     @Override

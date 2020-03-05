@@ -77,8 +77,30 @@ public class MainActivity extends AppCompatActivity {
                         RootObject rootObject = gson.fromJson(response.toString(), RootObject.class);
                         for (int i = 0; i < rootObject.getStations().size(); i++) {
                             Weather weather = new Weather();
+                            weather.setTime(rootObject.getStations().get(i).getObserve().getTime());
+                            weather.setStationNameTh(rootObject.getStations().get(i).getStationNameTh());
                             weather.setStationNameEng(rootObject.getStations().get(i).getStationNameEng());
+
                             weather.setTemperatureValue(rootObject.getStations().get(i).getObserve().getTemperature().getValue());
+                            weather.setTemperatureUnit(rootObject.getStations().get(i).getObserve().getTemperature().getUnit());
+
+                            weather.setRelativeHumidityValue((int) rootObject.getStations().get(i).getObserve().getRelativeHumidity().getValue());
+                            weather.setRelativeHumidityUnit(rootObject.getStations().get(i).getObserve().getRelativeHumidity().getUnit());
+
+                            if (rootObject.getStations().get(i).getObserve().getWindSpeed() != null) {
+                                weather.setWindSpeedValue((int) rootObject.getStations().get(i).getObserve().getWindSpeed().getValue());
+                                weather.setWindSpeedValueUnit(rootObject.getStations().get(i).getObserve().getWindSpeed().getUnit());
+                            } else {
+                                weather.setWindSpeedValue((int) 0);
+                                weather.setWindSpeedValueUnit("null");
+                            }
+
+                            //weather.setWindSpeedValue((int) rootObject.getStations().get(i).getObserve().getWindSpeed().getValue());
+                            //weather.setWindSpeedValueUnit(rootObject.getStations().get(i).getObserve().getWindSpeed().getUnit());
+
+                            weather.setRainfallValue(rootObject.getStations().get(i).getObserve().getRainfall().getValue());
+                            weather.setRainfallUnit(rootObject.getStations().get(i).getObserve().getRainfall().getUnit());
+
                             weatherArrayList.add(weather);
                         }
 
