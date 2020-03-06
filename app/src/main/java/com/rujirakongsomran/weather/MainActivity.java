@@ -3,6 +3,7 @@ package com.rujirakongsomran.weather;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,10 +14,11 @@ import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
-import com.android.volley.RetryPolicy;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.github.ybq.android.spinkit.sprite.Sprite;
+import com.github.ybq.android.spinkit.style.DoubleBounce;
 import com.google.gson.Gson;
 import com.rujirakongsomran.weather.Adapter.WeatherAdapter;
 import com.rujirakongsomran.weather.Model.RootObject;
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnCallService;
     TextView tvResponse;
     RecyclerView recycler_posts;
+    ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +47,9 @@ public class MainActivity extends AppCompatActivity {
 //        btnCallService = (Button) findViewById(R.id.btnCallService);
 //        btnCallService.setOnClickListener(btnCallServiceListener);
 //        tvResponse = (TextView) findViewById(R.id.tvResponse);
+        progressBar = (ProgressBar)findViewById(R.id.spin_kit);
+        Sprite doubleBounce = new DoubleBounce();
+        progressBar.setIndeterminateDrawable(doubleBounce);
 
         mQueue = Volley.newRequestQueue(this);
 
@@ -71,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
+                        progressBar.setVisibility(View.GONE);
                         ArrayList<Weather> weatherArrayList = new ArrayList<>();
                         Gson gson = new Gson();
 
